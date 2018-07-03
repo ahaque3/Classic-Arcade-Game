@@ -23,6 +23,10 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
+//draw player in begining
+Player.prototype.render=function(){
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+}
 
 //create player class {
 var Player =function () {
@@ -31,6 +35,25 @@ var Player =function () {
     this.y=425;
     this.height=50;
     this.width=40;
+}
+//if user gets to water
+Player.prototype.update=function(){
+  if(player.y == -25){
+    alert("Congratulations!  You win!!! Wanna play again?")
+    //reset game
+    player.x=200;
+    player.y=425;
+  }
+  //if user touches enemey
+  for(i=0; i<allEnemies.length; i++){
+    (allEnemies[i].x+allEnemies[i].width>player.x) &&
+    (allEnemies[i].x +allEnemies[i].width>player.x)&&
+    (allEnemies[i].y< (player.y +player.height))&&
+    ((allEnemies[i].height + allEnemies[i].y)> player.y){
+      player.x=200;
+      player.y=400;
+    }
+  }
 }
 
 
