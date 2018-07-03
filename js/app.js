@@ -59,13 +59,40 @@ Player.prototype.update=function(){
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
-const enemy1 = new Enemy(0,60,125);
-const enemy2 = new Enemy(0,140,80);
-const enemy3 = new Enemy(0,225,200);
+let enemy1 = new Enemy(0,60,125);
+let enemy2 = new Enemy(0,140,80);
+let enemy3 = new Enemy(0,225,200);
 let allEnemies = [enemy1, enemy2, enemy3];
 
 // Place the player object in a variable called player
-const player=
+let player= new Player();
+
+//move player with keyboard input
+Player.prototype.handleInput=function(keyPressed){
+  if(keyPressed ==="left"){
+    //if move is out of bounds
+    if (player.x===25){
+      return
+    }
+    player.x-=25;
+  }else if(keyPressed==="right"){
+    //out of bounds
+    if(player.x===375){
+      return
+    }
+  }player.x+=25;
+
+  }else if(keyPressed ==="up"){
+    player.y-=25;
+  }else if(keyPressed==="down"){
+  //out of bounds
+    if(player.y===425){
+      return
+    }
+    player.y+=25;
+  }
+}
+
 
 
 // This listens for key presses and sends the keys to your
