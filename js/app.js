@@ -23,10 +23,7 @@ Enemy.prototype.update = function(dt) {
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-//draw player in begining
-Player.prototype.render=function(){
-  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+
 
 //create player class {
 var Player =function () {
@@ -35,6 +32,10 @@ var Player =function () {
     this.y=425;
     this.height=50;
     this.width=40;
+}
+//draw player in begining
+Player.prototype.render=function(){
+  ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 }
 //if user gets to water
 Player.prototype.update=function(){
@@ -46,15 +47,16 @@ Player.prototype.update=function(){
   }
   //if user touches enemey
   for(i=0; i<allEnemies.length; i++){
-    (allEnemies[i].x+allEnemies[i].width>player.x) &&
+    if((allEnemies[i].x+allEnemies[i].width>player.x)&&
     (allEnemies[i].x +allEnemies[i].width>player.x)&&
     (allEnemies[i].y< (player.y +player.height))&&
-    ((allEnemies[i].height + allEnemies[i].y)> player.y){
+    ((allEnemies[i].height + allEnemies[i].y)> player.y)){
       player.x=200;
       player.y=400;
     }
   }
 }
+
 
 
 // Now instantiate your objects.
@@ -80,8 +82,8 @@ Player.prototype.handleInput=function(keyPressed){
     if(player.x===375){
       return
     }
-  }player.x+=25;
 
+  player.x+=25;
   }else if(keyPressed ==="up"){
     player.y-=25;
   }else if(keyPressed==="down"){
@@ -96,7 +98,7 @@ Player.prototype.handleInput=function(keyPressed){
 
 
 // This listens for key presses and sends the keys to your
-// Player.handleInput() method. You don't need to modify this.
+// Player.handleInput() method.
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
