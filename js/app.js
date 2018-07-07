@@ -1,5 +1,5 @@
 // Enemies our player must avoid
-var Enemy = function(x, y, rate) {
+const Enemy = function(x, y, rate) {
     // Variables applied to each of our instances go here,
 
     this.sprite = 'images/enemy-bug.png';
@@ -26,10 +26,10 @@ Enemy.prototype.render = function() {
 
 
 //create player class {
-var Player =function () {
+const Player =function () {
     this.sprite='images/char-boy.png';
     this.x=200;
-    this.y=425;
+    this.y=400;
     this.height=50;
     this.width=40;
 }
@@ -43,7 +43,7 @@ Player.prototype.update=function(){
     alert("Congratulations!  You win!!! Wanna play again?")
     //reset game
     player.x=200;
-    player.y=425;
+    player.y=400;
   }
   //if user touches enemey
   for(i=0; i<allEnemies.length; i++){
