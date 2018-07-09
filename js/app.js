@@ -47,7 +47,7 @@ Player.prototype.update=function(){
   }
   //if user touches enemey
   for(i=0; i<allEnemies.length; i++){
-    if((allEnemies[i].x+allEnemies[i].width>player.x)&&
+    if(allEnemies[i].x<(player.x+player.width)&&
     (allEnemies[i].x +allEnemies[i].width>player.x)&&
     (allEnemies[i].y< (player.y +player.height))&&
     ((allEnemies[i].height + allEnemies[i].y)> player.y)){
