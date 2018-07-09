@@ -37,5 +37,6 @@ Builder of the game's functionality and styling.
 ----------------------
 Mathew Cranford for help in understanding functionality and basics
 <https://discussions.udacity.com/t/fend-project-walkthroughs-proj-2-3/775450
-https://matthewcranford.com/arcade-game-walkthrough-part-3-creating-a-hero/">
+https://matthewcranford.com/arcade-game-walkthrough-part-3-creating-a-hero/"/>
+
 My colleagues at udacity who helped with debugging and finding those hidden glitches sources.
