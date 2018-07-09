@@ -1,10 +1,12 @@
-# Classic-Arcade-Game#
+# Classic-Arcade-Game #
 A customized version of the Frogger game
 
-##Instrutions##
+Instrutions
+------------
 Your Goal is...To get to the other side- no this is not a punchline!  Okay, maybe it's a punchline...
 
-##CONTRIBUTERS##
+CONTRIBUTERS
+------------
 People who wrote the code to start off with for the Udacity students.
 
 >David Harris
@@ -20,8 +22,8 @@ Builder of the game's functionality and styling.
 
 >Daniel Martinez
 
-##Special Thanks to:##
-
+**Special Thanks to:**
+----------------------
 Mathew Cranford for help in understanding functionality and basics
 <https://discussions.udacity.com/t/fend-project-walkthroughs-proj-2-3/775450
 https://matthewcranford.com/arcade-game-walkthrough-part-3-creating-a-hero/">
