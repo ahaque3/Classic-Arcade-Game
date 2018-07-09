@@ -6,15 +6,15 @@ const Enemy = function(x, y, rate) {
     this.x=x;
     this.y=y;
     this.height=45;
-    this.width=30;
+    this.width=25;
     this.rate=rate;
 };
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
-  this.x+=2;
-  if(this.x>600){
+  this.x+=this.rate*dt;
+  if(this.x>500){
     this.x=-100;
   }
 };
@@ -57,8 +57,6 @@ Player.prototype.update=function(){
   }
 }
 
-
-
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 let enemy1 = new Enemy(0,60,125);
@@ -70,12 +68,10 @@ let allEnemies = [enemy1, enemy2, enemy3];
 let player= new Player();
 
 //move player with keyboard input
+
 Player.prototype.handleInput=function(keyPressed){
-  if(keyPressed ==="left"){
+  if(keyPressed ==="left" && player.x>25 ){
     //if move is out of bounds
-    if (player.x===25){
-      return
-    }
     player.x-=25;
   }else if(keyPressed==="right"){
     //out of bounds
@@ -84,7 +80,8 @@ Player.prototype.handleInput=function(keyPressed){
     }
 
   player.x+=25;
-  }else if(keyPressed ==="up"){
+}else if(keyPressed ==="up"){
+
     player.y-=25;
   }else if(keyPressed==="down"){
   //out of bounds
