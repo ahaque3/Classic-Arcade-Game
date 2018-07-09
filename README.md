@@ -3,19 +3,30 @@ A customized version of the Frogger game
 
 Instrutions
 ------------
-Your Goal is...To get to the other side- no this is not a punchline!  Okay, maybe it's a punchline...
+Your Goal is...To get to the other side- no this is not a punchline!  
+...Okay, maybe it's a punchline.
+
+Navigate your player with the arrow keys of your keyboard without colliding with the enemy bugs.
+You win when you reach the water.
 
 CONTRIBUTERS
 ------------
 People who wrote the code to start off with for the Udacity students.
 
 >David Harris
+
 >Richard Kalehoff
+
 >Susan Smith
+
 >Michael Wales
+
 >Siakaram alego
+
 >Nicolas Artman
+
 >Heidi Kasemir
+
 >Durant Schoon
 
 Builder of the game's functionality and styling.
