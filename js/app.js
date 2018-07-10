@@ -13,9 +13,9 @@ const Enemy = function(x, y, rate) {
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
-  this.x+=this.rate*dt;
-  if(this.x>500){
-    this.x=-100;
+    this.x+=this.rate*dt;
+    if(this.x>500){
+      this.x=-100;
   }
 };
 
@@ -39,20 +39,20 @@ Player.prototype.render=function(){
 }
 //if user gets to water
 Player.prototype.update=function(){
-  if(player.y == -25){
+  if(this.y == -25){
     alert("Congratulations!  You win!!! Wanna play again?")
     //reset game
-    player.x=200;
-    player.y=400;
+    this.x=200;
+    this.y=400;
   }
   //if user touches enemey
   for(i=0; i<allEnemies.length; i++){
-    if(allEnemies[i].x<(player.x+player.width)&&
-    (allEnemies[i].x +allEnemies[i].width>player.x)&&
-    (allEnemies[i].y< (player.y +player.height))&&
-    ((allEnemies[i].height + allEnemies[i].y)> player.y)){
-      player.x=200;
-      player.y=400;
+    if(allEnemies[i].x<(this.x+this.width)&&
+    (allEnemies[i].x +allEnemies[i].width>this.x)&&
+    (allEnemies[i].y< (this.y +this.height))&&
+    ((allEnemies[i].height + allEnemies[i].y)> this.y)){
+      this.x=200;
+      this.y=400;
     }
   }
 }
