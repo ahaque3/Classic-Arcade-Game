@@ -9,11 +9,15 @@ Your Goal is...To get to the other side- no this is not a punchline!
 Navigate your player with the arrow keys of your keyboard without colliding with the enemy bugs.
 You win when you reach the water.
 
-__To get started go to this page https://github.com/ahaque3/Classic-Arcade-Game
-1 click download
-2 go to folder for dowloaded contents and click index.html
-3 to move your player use the arrow keys to move
-4 avoid the enemys! if you get hit by one you will restart at the beginnig.__
+__To get started go to this page https://github.com/ahaque3/Classic-Arcade-Game__
+
+_1 click download_
+
+_2 go to folder for dowloaded contents and click index.html_
+
+_3 to move your player use the arrow keys to move_
+
+_4 avoid the enemys! if you get hit by one you will restart at the beginnig._
 
 CONTRIBUTERS
 ------------
